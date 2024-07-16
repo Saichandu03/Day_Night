@@ -1,0 +1,121 @@
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    width: 100%;
+    background-color: white;
+}
+.child{
+    height: 80%;
+    width: 50%;
+    background-color: antiquewhite;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 25px  gray;
+
+}
+.v{
+    height: 100%;
+    width: 20%;
+    /* background-color:black; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: my_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+.up{
+    height: 50%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    animation-name: colour1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+}
+.down{
+    height: 50%;
+    width: 100%;
+    background-color: gray;
+    position: absolute;
+    bottom: 0%;
+    animation-name: colour2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+.moon{
+    height: 120px;
+    width: 120px;
+    background-image: url(../Day_Night/moon.png);
+    background-size: cover;
+    box-shadow: 0px 0px 10 gray;
+    position: absolute;
+    top: 0%;
+    border-radius: 50%;
+}
+.sun{
+    height: 120px;
+    width: 120px;
+    background-image: url(../Day_Night/sun.png);
+    background-size: cover;
+    box-shadow: 0px 0px 10 black;
+    position: absolute;
+    bottom: 0%;
+    border-radius: 50%;
+}
+@keyframes my_animation{
+    0%{
+        transform:rotate(0deg) ;
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform:rotate(360deg) ;
+    }
+
+}
+@keyframes colour1{
+    0%{
+        background-image: url(../Day_Night/night.jpg);
+        background-size: contain;
+    }
+    
+    50%{
+        background-image: url(../Day_Night/day.jpg);
+        background-size: contain;
+    }
+    
+    100%{
+        background-image: url(../Day_Night/night.jpg);
+        background-size: contain;
+    }
+}
+@keyframes colour2{
+    0%{
+        background-image: url(../Day_Night/day.jpg);
+        background-size: contain;
+    }
+    
+    50%{
+        background-image: url(../Day_Night/night.jpg);
+        background-size: contain;
+    }
+    
+    100%{
+        background-image: url(../Day_Night/day.jpg);
+        background-size: contain;
+
+    }
+}
